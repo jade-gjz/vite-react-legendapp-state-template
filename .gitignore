@@ -1,0 +1,28 @@
+node_modules
+.DS_Store
+dist
+build
+dist-ssr
+stats.html
+*.zip
+
+# cache
+.eslintcache
+
+# ide
+.vscode
+.idea
+
+# lock
+*.local
+/package-lock.json
+/yarn.lock
+
+# log
+.log*
+
+/src/typings/auto-imports.d.ts
+/tsconfig.tsbuildinfo
+/src/typings/api-generated/
+public/mockServiceWorker.js
+/src/consts/icons/
