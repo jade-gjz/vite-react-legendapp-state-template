@@ -5,6 +5,9 @@ const MobxState = observer(() => {
   const ref = useRef(0)
   const counter = useLocalObservable(() => ({
     count: 0,
+    get computedCount() {
+      return this.count * 2
+    },
     setCount(val: number) {
       this.count = val
     },
@@ -16,7 +19,7 @@ const MobxState = observer(() => {
         <code>Render Times: {++ref.current}</code>
       </p>
       <p>
-        <code>Count is {counter.count * 2}</code>
+        <code>Count is {counter.computedCount}</code>
       </p>
       <button
         className="hover:border-amber-400 focus:(ring-1 ring-amber-600)"

@@ -1,11 +1,13 @@
-import { atom, useAtom } from 'jotai'
+import { atom, useAtomValue, useSetAtom } from 'jotai'
 import { useRef } from 'react'
 
 const countAtom = atom(0)
+const computedCountAtom = atom(get => get(countAtom) * 2)
 
 const JotaiState = () => {
   const ref = useRef(0)
-  const [count, setCount] = useAtom(countAtom)
+  const setCount = useSetAtom(countAtom)
+  const count = useAtomValue(computedCountAtom)
 
   return (
     <div className="card shadow-red-600">
@@ -13,7 +15,7 @@ const JotaiState = () => {
         <code>Render Times: {++ref.current}</code>
       </p>
       <p>
-        <code>Count is {count * 2}</code>
+        <code>Count is {count}</code>
       </p>
       <button
         className="hover:border-rose-400 focus:(ring-1 ring-rose-600)"
