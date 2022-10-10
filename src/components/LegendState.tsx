@@ -1,5 +1,5 @@
 import { useComputed, useObservable, useObserve } from '@legendapp/state/react'
-import { useRef } from 'react'
+import { memo, useRef } from 'react'
 
 const LegendState = () => {
   const ref = useRef(0)
