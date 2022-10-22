@@ -16,6 +16,9 @@ const MobxState = observer(() => {
   return (
     <div className="card shadow-yellow-600">
       <p>
+        <span className="text-yellow-400">MobxState</span>
+      </p>
+      <p>
         <code>Render Times: {++ref.current}</code>
       </p>
       <p>
@@ -25,15 +28,8 @@ const MobxState = observer(() => {
         className="hover:border-amber-400 focus:(ring-1 ring-amber-600)"
         onClick={() => counter.setCount(counter.count > 5 ? 0 : counter.count + 1)}
       >
-        Click Me!
+        Click Me !
       </button>
-      <p>
-        Edit{' '}
-        <code>
-          src/components/<span className="text-yellow-400">MobxState</span>.tsx
-        </code>{' '}
-        and save to test HMR
-      </p>
     </div>
   )
 })

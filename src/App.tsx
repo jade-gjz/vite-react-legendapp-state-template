@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { Provider } from 'jotai'
 import { useInterval } from 'ahooks'
 import { useObservable } from '@legendapp/state/react'
@@ -8,8 +8,10 @@ import UseState from './components/UseState'
 import LegendState from './components/LegendState'
 import JotaiState from './components/JotaiState'
 import MobxState from './components/MobxState'
+import ValtioState from './components/ValtioState'
+import ZustandState from './components/ZustandState'
 
-const Top = () => {
+const Block1 = () => {
   const [count, setCount] = useState(0)
 
   useInterval(() => {
@@ -22,22 +24,18 @@ const Top = () => {
       <div className="fc">
         <UseState />
         <LegendState />
-        {useMemo(
-          () => (
-            <LegendState />
-          ),
-          []
-        )}
         <Provider>
           <JotaiState />
         </Provider>
+        <ValtioState />
+        <ZustandState />
         <MobxState />
       </div>
     </>
   )
 }
 
-const Bottom = () => {
+const Block2 = () => {
   const state = useObservable({ count: 0 })
 
   useInterval(() => {
@@ -50,15 +48,11 @@ const Bottom = () => {
       <div className="fc">
         <UseState />
         <LegendState />
-        {useMemo(
-          () => (
-            <LegendState />
-          ),
-          []
-        )}
         <Provider>
           <JotaiState />
         </Provider>
+        <ValtioState />
+        <ZustandState />
         <MobxState />
       </div>
     </>
@@ -70,17 +64,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" rel="noreferrer" target="_blank">
-          <img alt="Vite logo" className="logo" src="/vite.svg" />
-        </a>
-        <a href="https://reactjs.org" rel="noreferrer" target="_blank">
-          <img alt="React logo" className="logo react" src={reactLogo} />
-        </a>
-      </div>
       <code>Render Times: {++ref.current}</code>
-      <Top />
-      <Bottom />
+      <Block1 />
+      <Block2 />
     </div>
   )
 }

@@ -14,7 +14,7 @@ export default defineConfig({
         fcb: 'flex items-center justify-between',
         fcc: 'flex items-center justify-center',
         fccc: 'flex items-center justify-center flex-col',
-        card: 'rounded shadow m-4 p-4',
+        card: 'rounded shadow-md m-4 p-4 min-w-160px',
       },
       transformers: [transformerDirectives(), transformerVariantGroup()],
       postcss: true,

@@ -7,6 +7,9 @@ const UseState = () => {
   return (
     <div className="card shadow-green-600">
       <p>
+        <span className="text-green-400">UseState</span>
+      </p>
+      <p>
         <code>Render Times: {++ref.current}</code>
       </p>
       <p>
@@ -16,15 +19,8 @@ const UseState = () => {
         className="hover:border-lime-400 focus:(ring-1 ring-lime-600)"
         onClick={() => setCount(prev => (prev > 5 ? 0 : prev + 1))}
       >
-        Click Me!
+        Click Me !
       </button>
-      <p>
-        Edit{' '}
-        <code>
-          src/components/<span className="text-green-400">UseState</span>.tsx
-        </code>{' '}
-        and save to test HMR
-      </p>
     </div>
   )
 }

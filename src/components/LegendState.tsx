@@ -1,5 +1,5 @@
 import { useComputed, useObservable, useObserve } from '@legendapp/state/react'
-import { memo, useRef } from 'react'
+import { useRef } from 'react'
 
 const LegendState = () => {
   const ref = useRef(0)
@@ -15,21 +15,17 @@ const LegendState = () => {
   return (
     <div className="card shadow-blue-600">
       <p>
+        <span className="text-blue-400">LegendState</span>
+      </p>
+      <p>
         <code>Render Times: {++ref.current}</code>
       </p>
       <p>
         <code>Count is {computedCount}</code>
       </p>
       <button className="hover:border-sky-400 focus:(ring-1 ring-sky-600)" onClick={() => count.set(prev => prev + 1)}>
-        Click Me!
+        Click Me !
       </button>
-      <p>
-        Edit{' '}
-        <code>
-          src/components/<span className="text-blue-400">LegendState</span>.tsx
-        </code>{' '}
-        and save to test HMR
-      </p>
     </div>
   )
 }
