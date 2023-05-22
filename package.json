@@ -8,28 +8,28 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@legendapp/state": "^0.20.5",
-    "ahooks": "^3.7.2",
-    "jotai": "^1.8.6",
-    "mobx": "^6.6.2",
-    "mobx-react-lite": "^3.4.0",
+    "@legendapp/state": "^1.0.0",
+    "ahooks": "^3.7.7",
+    "jotai": "^1.13.1",
+    "mobx": "^6.9.0",
+    "mobx-react-lite": "^3.4.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "valtio": "^1.7.4",
-    "zustand": "^4.1.2"
+    "valtio": "^1.10.5",
+    "zustand": "^4.3.8"
   },
   "devDependencies": {
-    "@jhqn/eslint-config-react": "^0.1.1",
-    "@jhqn/stylelint-config": "^0.1.0",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.1.0",
-    "eslint": "^8.26.0",
-    "postcss": "^8.4.18",
-    "rollup-plugin-visualizer": "^5.8.3",
-    "stylelint": "^14.14.0",
-    "typescript": "^4.6.4",
-    "unocss": "^0.45.30",
-    "vite": "^3.1.8"
+    "@jhqn/eslint-config-react": "^0.1.4",
+    "@jhqn/stylelint-config": "^0.1.2",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@vitejs/plugin-react": "^2.2.0",
+    "eslint": "^8.41.0",
+    "postcss": "^8.4.23",
+    "rollup-plugin-visualizer": "^5.9.0",
+    "stylelint": "^14.16.1",
+    "typescript": "^5.0.4",
+    "unocss": "^0.52.0",
+    "vite": "^4.3.8"
   }
 }
