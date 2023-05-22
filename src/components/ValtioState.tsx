@@ -1,8 +1,12 @@
 import { useRef } from 'react'
-import { useSnapshot } from 'valtio'
-import { proxyWithComputed } from 'valtio/utils'
+import { proxy, useSnapshot } from 'valtio'
 
-const state = proxyWithComputed({ count: 0 }, { doubledCount: snap => snap.count * 2 })
+const state = proxy({
+  count: 0,
+  get doubledCount() {
+    return this.count * 2
+  },
+})
 
 const increment = () => (state.count > 5 ? (state.count = 0) : (state.count += 1))
 
